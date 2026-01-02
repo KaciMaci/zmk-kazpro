@@ -1,0 +1,6 @@
+if SHIELD_KAZPRO
+
+config ZMK_KEYBOARD_NAME
+    default "KazPro"
+
+endif
