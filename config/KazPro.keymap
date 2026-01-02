@@ -6,12 +6,6 @@
 
 / {
     behaviors {
-         rot_kp: behavior_sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "ENC_KP";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow mods";
@@ -19,21 +13,6 @@
             tapping-term-ms = <500>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        };
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp C_PP>, <&tog layer_1>;
-        };
-     combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <200>;
-            key-positions = <0 5>;
-            bindings = <&tog layer_2>;
-           };
         };
     };
 };
